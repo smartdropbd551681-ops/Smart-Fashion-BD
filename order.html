@@ -68,7 +68,6 @@
 
 </form>
 
-<input type="text" placeholder="আপনার নাম" required><br><br>
 
 
 </section>
@@ -76,6 +75,32 @@
 <footer class="footer">
 © 2026 Smart Fashion BD
 </footer>
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
 
+    let name = document.querySelector('input[name="name"]').value;
+    let phone = document.querySelector('input[name="phone"]').value;
+    let address = document.querySelector('textarea[name="address"]').value;
+    let product = document.querySelector('select[name="product"]').value;
+    let size = document.querySelector('select[name="size"]').value;
+    let color = document.querySelector('input[name="color"]').value;
+    let qty = document.querySelector('input[name="quantity"]').value;
+
+    let message =
+`🛒 নতুন অর্ডার
+
+👤 নাম: ${name}
+📞 মোবাইল: ${phone}
+📍 ঠিকানা: ${address}
+
+🛍️ পণ্য: ${product}
+📏 সাইজ: ${size}
+🎨 রং: ${color}
+🔢 পরিমাণ: ${qty}`;
+
+    window.open("https://wa.me/8801864757992?text=" + encodeURIComponent(message), "_blank");
+});
+  </script>
 </body>
                                                       </html>
