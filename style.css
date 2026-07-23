@@ -87,3 +87,27 @@ body{
     text-align:center;
     padding:20px;
   }
+.search-box{
+    text-align:center;
+    padding:20px;
+}
+
+.search-box input{
+    width:70%;
+    max-width:350px;
+    padding:12px;
+    border:2px solid #d60000;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.search-box button{
+    padding:12px 20px;
+    margin-left:8px;
+    background:#d60000;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    }
