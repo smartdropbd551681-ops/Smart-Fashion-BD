@@ -49,14 +49,14 @@
 </button>
 
 </div>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
 <script>
 const supabaseUrl = "https://mxiqonrtzhmqnunddrkj.supabase.co";
-const supabaseKey ="sb_publishable_ZyPvH2HEd8eMrZ9v1qwZCg_HhuaH-NW";
-
+const supabaseKey = "sb_publishable_ZyPvH2HEd8eMrZ9v1qwZCg_HhuaH-NW";
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
-</script>
-  <script>
+
 async function publishProduct() {
 
   const name = document.getElementById("name").value;
@@ -74,13 +74,13 @@ async function publishProduct() {
     ]);
 
   if (error) {
-  alert(error.message);
-  return;
+    alert(error.message);
+    return;
+  }
+
+  alert("✅ Product Published Successfully!");
 }
+</script>
 
-alert("Product Published Successfully!");
-
-document.getElementById("publishBtn").addEventListener("click", publishProduct);
-  </script>
 </body>
-  </html>
+</html>
