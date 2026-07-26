@@ -74,11 +74,11 @@ async function publishProduct() {
     ]);
 
   if (error) {
-    alert("❌ Error: " + error.message);
-  } else {
-    alert("✅ Product Published Successfully!");
-  }
+  alert(error.message);
+  return;
+}
 
+alert("Product Published Successfully!");
 
 document.getElementById("publishBtn").addEventListener("click", publishProduct);
   </script>
