@@ -3,22 +3,30 @@ const SUPABASE_KEY = "sb_publishable_ZyPvH2HEd8eMrZ9v1qwZCg_HhuaH-NW";
 
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-document.getElementById("productForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
+async function publishProduct() {
 
-  const name = document.getElementById("name").value;
+  const name = document.getElementById("name").value.trim();
   const price = Number(document.getElementById("price").value);
   const category = document.getElementById("category").value;
-  const image = document.getElementById("image").value;
+  const image = document.getElementById("image").value.trim();
 
   const { error } = await supabase
     .from("products")
-    .insert([{ name, price, category, image }]);
+    .insert([
+      {
+        name: name,
+        price: price,
+        category: category,
+        image: image
+      }
+    ]);
 
   if (error) {
-    alert("Error: " + error.message);
-  } else {
-    alert("✅ Product Published Successfully");
-    document.getElementById("productForm").reset();
+    console.log(error);
+    alert("❌ " + error.message);
+    return;
   }
-});
+
+  alert("✅ Product Published Successfully!");
+  document.getElementById("productForm").reset();
+}
