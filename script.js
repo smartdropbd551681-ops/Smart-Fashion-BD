@@ -65,4 +65,4 @@ document
 
   publishProduct();
 
-});
+});alert("script.js চলছে");
