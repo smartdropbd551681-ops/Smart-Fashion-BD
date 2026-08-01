@@ -66,3 +66,6 @@ document
   publishProduct();
 
 });alert("script.js চলছে");
+document.getElementById("publishBtn").addEventListener("click", function () {
+    alert("Publish Button চাপা হয়েছে");
+});
