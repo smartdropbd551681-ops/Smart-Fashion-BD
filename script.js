@@ -1,6 +1,6 @@
 
   const SUPABASE_URL = "https://mxiqonrtzhmqnunddrkj.supabase.co";
-const SUPABASE_KEY = "তোমার Publishable Key";
+const SUPABASE_KEY = "sb_publishable_ZyPvH2HEd8eMrZ9v1qwZCg_HhuaH-NW";
 
 const supabase = window.supabase.createClient(
   SUPABASE_URL,
